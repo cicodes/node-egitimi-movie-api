@@ -14,6 +14,9 @@ const app = express();
 //db connection --- sonundaki parantez db.js deki fonksiyonu çalıştırmak için
 const db = require('./helper/db.js')();
 
+//config
+const config = require('./config.js');
+app.set('api_secret_key',config.api_secret_key);
 
 
 // view engine setup
